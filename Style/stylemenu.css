@@ -1,0 +1,152 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.nav-item {
+    margin: 0 15px;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+ 
+.logo {
+    font-size: 25px;
+    color: #e7770d;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideRight 1s ease forwards;
+}
+ 
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+ 
+.navbar a:hover{
+    color:#e7770d;
+}
+ 
+.social-media-navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+
+ 
+.social-media-navbar a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+    transition: .5s;
+    animation: slideSci .5s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+ 
+.social-media-navbar a:hover{
+    border-color: #000000;
+}
+ 
+.social-media-navbar a i {
+    font-size: 24px;
+    color: #e7770d;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+    .header{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .rhombus {
+        display: none;
+    }
+    .icon {
+        position: fixed;
+        z-index: 99;
+    }
+    .nav {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-item {
+        text-decoration: none;
+        color: white;
+    }
+    .navbar {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: flex;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: flex;
+        height: 100%;
+        background: #17b6be;
+        position: inherit;
+        bottom: 0;
+        right: 0;
+        width: 280px;
+        z-index: 0;
+        flex-direction: column;
+    }
+    .social-media-navbar {
+        display: none;
+    }
+    .name-enterprise{
+        color: #17b6be!important;
+    }
+}
